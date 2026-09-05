@@ -5,16 +5,18 @@ worlds, build environments, credentials and private reports out of Git history.
 The deny-by-default `.gitignore` deliberately allows only reviewed documentation
 and branding. Do not bypass it with `git add -f`.
 
-Local release assets are staged in `.release-assets/v1.1.1/` and are ignored by Git.
+Local release assets may be staged in `.release-assets/v1.3.0/` and are ignored by Git.
 Commit/push the product documentation only; attach the binaries to a release.
 No commit, push, tag, GitHub release or LootLabs link is automatically created by
 this repository preparation.
 
 ## Before uploading
 
-- Check the staged installer and ZIP match `SHA256SUMS.txt` and the build audit.
-- Confirm the free-use terms are included inside both actual downloads.
-- Run the package/archive privacy audit, frozen diagnostics and installer QA.
+- Check the staged ZIP matches `SHA256SUMS.txt` and the build audit.
+- Confirm the free-use terms are included inside the actual download.
+- Run the package/archive privacy audit and frozen diagnostics. Version 1.3.0
+  is ZIP-only: do not attach the unverified 1.2.0 installer candidate or relabel
+  an older installer. A future installer needs its own full lifecycle QA.
 - Run a targeted Defender scan with protection enabled and verify completion.
 - Keep third-party licenses. Never upload the original project/server directory.
 - Retain the unsigned-build and test-limitations disclosures in release notes.
@@ -26,10 +28,9 @@ this repository preparation.
 
 1. Review and commit the allowed repository files, then push `main`.
 2. On the repository's **Releases** page, choose **Draft a new release**.
-3. Use tag `v1.1.1`, title `FlintDock 1.1.1`, targeting the intended reviewed commit.
+3. Use tag `v1.3.0`, title `FlintDock 1.3.0`, targeting the intended reviewed commit.
 4. Attach exactly these local files:
-   - `FlintDock-1.1.1-Windows-x64-Standalone.zip`
-   - `FlintDock-1.1.1-Setup.exe`
+   - `FlintDock-1.3.0-Windows-x64-Standalone.zip`
    - `SHA256SUMS.txt`
 5. Paste `docs/RELEASE-NOTES.md`, which includes actual results and limitations.
    Check all attachments before publishing; use a draft while reviewing.
@@ -37,6 +38,27 @@ this repository preparation.
    hashes and confirm the standalone ZIP—not Source code—is the app download.
 
 These steps follow [GitHub's release documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository).
+
+## Automatic-update feed contract
+
+The 1.3.0 client reads the public, unauthenticated latest-release API for
+`joshuajhigdon/FlintDock`. The repository and stable release must both be publicly
+readable. Do not embed an owner's token to work around a private repository.
+
+Future versions use a three-component numeric tag, `vX.Y.Z` (or `X.Y.Z`), with
+an asset named exactly `FlintDock-X.Y.Z-Windows-x64-Standalone.zip`. Mark the
+stable release Latest; draft/prerelease versions are ignored. The ZIP needs a
+top-level FlintDock folder containing both EXEs and the adjacent _internal folder.
+
+Attach SHA256SUMS.txt with the ZIP's 64-character SHA-256, two spaces and its
+filename. The client also accepts GitHub's sha256 asset digest; at least one
+verification source is required, and both must agree if supplied. Avoid
+duplicate entries and keep the ZIP below the client's 256 MiB download limit.
+Owner/repository changes and incompatible package layouts require a client update.
+
+Test the published feed without authentication and download with an older client
+before declaring automatic updates operational. Checks run only while the GUI
+is open. The client downloads but never installs or executes an update.
 
 ## LootLabs destination (not configured yet)
 

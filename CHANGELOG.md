@@ -1,5 +1,34 @@
 # Changelog
 
+## 1.3.0 — launcher updates
+
+- Check the public GitHub stable-release feed while the GUI is open. Checks
+  default to every six hours, with one/six/twelve/twenty-four-hour choices.
+- Optional automatic downloads, manual checks, progress, cancellation and
+  verified-cache reuse. Automatic downloads are off by default.
+- Exact release ZIP selection, SHA-256 and size verification, HTTPS restrictions
+  and archive validation. No automatic extraction, installation or server stop.
+- Settings, Help and Updates-page entry points. Launcher update settings/cache
+  stay separate from server data and Bedrock server update settings.
+- 204 automated tests passed: 156 Python, 10 packaging and 38 JavaScript. Actual
+  standalone package audits and isolated frozen diagnostics passed. Targeted
+  local Defender scans completed with zero detections.
+- Standalone ZIP only for this version; no 1.3.0 installer was built or tested.
+
+## 1.2.0 — persistent player management
+
+- Searchable online/offline player directory combining known history, current
+  connections and allowlist entries, with activity and queue details.
+- Visitor, Member and Operator role editing for known XUIDs; guarded permission
+  file writes, recovery copies and a live permission-reload request.
+- Queue commands for a future join, including XUID identity checks and a
+  join-time guard. Commands queued after a join wait for a later join.
+- Existing history and name-only queue entries remain supported. Command
+  dispatch is not an exactly-once execution guarantee across crashes.
+- 177 automated tests and standalone package diagnostics passed. Installer
+  lifecycle testing was blocked by an existing installation, so that candidate
+  was not distributed as a verified installer.
+
 ## 1.1.1 — free-use distribution
 
 - License now permits free use without purchase, subscription or paid activation.
@@ -26,7 +55,8 @@ Tests use disposable folders and restricted process environments on the existing
 Windows 10 x64 host, not a pristine VM. Windows 11 and full-window manual visual
 acceptance remain outstanding. The capture service could not capture the GUI.
 Original artwork was visually inspected; automated layout/contrast tests passed
-for the preceding theme release. This licensing update does not change UI layout.
+for the theme release. Newer player/update screens passed automated initialization
+and layout checks; no complete manual visual acceptance is claimed.
 
 The software and installer remain unsigned. Local Defender results are point-in-time
 checks, not guarantees for other machines, future signatures, SmartScreen or

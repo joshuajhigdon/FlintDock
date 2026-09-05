@@ -1,4 +1,4 @@
-FlintDock 1.1.1 - end-user terms
+FlintDock 1.3.0 - end-user terms
 
 You may install and use this version free of charge on Windows computers to
 administer servers you own or are authorized to manage. No purchase,

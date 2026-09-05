@@ -14,6 +14,10 @@ it does not create Start menu entries or Windows Apps registration.
 
 ## Installer
 
+Version 1.3.0 is ZIP-only. These installer instructions apply only to a version
+that actually includes a tested Setup.exe asset; an older installer does not
+contain the 1.3.0 features.
+
 Run `FlintDock-<version>-Setup.exe`, choose a dedicated application directory,
 and select the optional desktop shortcut if wanted. It installs for the current
 user. Open **FlintDock** from Start, or **Server Setup** to choose another server.
@@ -59,6 +63,28 @@ The saved server selection retains the historical
 Old manually created desktop shortcuts may need replacing. In-game pack UUIDs
 and command namespaces remain stable; review compatibility before game updates.
 
+## Launcher update downloads (1.3.0+)
+
+Open **Settings → FlintDock updates…**, also available under Help and on the
+Updates page. Periodic checks default to every six hours while the GUI is open;
+one, six, twelve and twenty-four hours are available. Checks can be disabled.
+Enable **Automatic updates: download new releases (do not install)** to opt in.
+The manual Check now and Download update controls are available too.
+
+Only newer stable releases from this public GitHub repository are accepted.
+Downloads require SHA-256, size and archive-layout verification. Progress,
+cancellation and Open downloads folder are provided. A missing/private feed or
+invalid asset produces a status message; no token or sign-in is required.
+
+Settings and cached ZIPs live under
+`%LOCALAPPDATA%\BedrockServerLauncher\FlintDockUpdates`, outside the selected
+server. The updater never extracts, installs or starts a downloaded executable
+and never stops your server. Follow the manual upgrade steps above once a
+download is ready. Launcher updates are separate from Bedrock server updates.
+
+In-app downloads use GitHub directly rather than LootLabs. Older launchers need
+a manual upgrade to 1.3.0 before they have this checker.
+
 ## Uninstalling
 
 Use Windows Apps or the Uninstall shortcut for an installed copy. The uninstaller
@@ -75,8 +101,7 @@ From the folder containing your downloads, use PowerShell to compare against the
 release's `SHA256SUMS.txt`:
 
 ```powershell
-Get-FileHash -LiteralPath '.\FlintDock-1.1.1-Windows-x64-Standalone.zip' -Algorithm SHA256
-Get-FileHash -LiteralPath '.\FlintDock-1.1.1-Setup.exe' -Algorithm SHA256
+Get-FileHash -LiteralPath '.\FlintDock-1.3.0-Windows-x64-Standalone.zip' -Algorithm SHA256
 ```
 
 These builds are unsigned. A checksum confirms bytes, not publisher identity or

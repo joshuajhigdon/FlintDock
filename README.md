@@ -18,6 +18,9 @@ choose an attached release asset when available:
 - **Windows installer:** choose an application folder and use the Start menu shortcuts.
 - **SHA256SUMS.txt:** checksums for verifying the downloaded files.
 
+**Version 1.3.0 is a standalone ZIP release; there is no 1.3.0 installer.**
+See the [1.3.0 release notes](docs/RELEASE-NOTES.md) for features and testing.
+
 GitHub's automatically generated **Source code** ZIP/tar.gz contains this
 documentation repository, not the launcher. Download the named FlintDock asset.
 Do not copy or run an EXE by itself; its companion runtime files are required.
@@ -31,6 +34,10 @@ binary license is not an open-source license.
 
 - Start, stop and restart a Bedrock server, with a state-aware portal dashboard.
 - View console output, server health, players and activity history.
+- Keep offline players visible, review their history, queue commands for a later
+  join, and change Visitor/Member/Operator roles for players with known XUIDs.
+- Check GitHub for launcher updates while FlintDock is open, with optional
+  automatic, checksum-verified downloads. Installation remains manual.
 - Configure restart schedules and manage backups and server settings.
 - Manage add-ons and install/update the bundled in-game helper pack.
 - Use **28 admin quick-command presets**, with search and a command preview.
@@ -41,6 +48,9 @@ binary license is not an open-source license.
 Some commands require cheats or the companion add-on. Not every third-party pack
 documents its commands, and future Bedrock/API versions are not guaranteed.
 The launcher is a local desktop application, not a hosting service or web panel.
+Queued commands require a running manager and a matching player join; sending a
+command is not proof that Minecraft accepted it. Only trust administrators with
+operator permissions. Automatic update downloads require a public GitHub release.
 
 ## Getting started
 
