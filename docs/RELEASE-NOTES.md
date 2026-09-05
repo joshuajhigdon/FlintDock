@@ -28,8 +28,10 @@ searchable help, restart scheduling and backup tools are retained.
 ## Download and upgrade
 
 Download **FlintDock-1.3.0-Windows-x64-Standalone.zip** and **SHA256SUMS.txt**.
-There is no 1.3.0 installer. Do not choose GitHub's automatic Source code archive;
-it contains this documentation repository, not the application.
+There is no 1.3.0 installer. GitHub's automatic Source code archive snapshots its
+tag, not a ready-to-run application. The existing v1.3.0 tag was created before
+source publication and has not been moved. Launcher, add-on and test source is
+available on main; see [Source code](SOURCE-CODE.md).
 
 1. Back up your server, stop the old server/manager and close the old launcher.
 2. Extract the complete ZIP into a new application folder outside your server

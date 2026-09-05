@@ -1,0 +1,158 @@
+FLINTDOCK 1.3.0 - BEDROCK SERVER MANAGER
+Independent Windows desktop administration software
+
+FREE TO USE
+No purchase, subscription or paid activation is required. Downloads may be
+supported through LootLabs links; the launcher itself contains no ads and
+requires no LootLabs account. See LICENSE.txt for the free-use terms.
+
+IGNITE YOUR WORLD
+Obsidian panels, portal-violet controls and warm flint-and-steel sparks.
+The dashboard gate is unlit when stopped, sparking while starting, and purple
+when the managed server is running. The plain-language status remains the
+source of truth. The artwork is original and uses no Minecraft game textures.
+
+INSTALL
+1. Run FlintDock-1.3.0-Setup.exe. Choose a dedicated app folder.
+   The installer is per-user and does not require an administrator account.
+   Python and Tk are bundled; do not install Python or Java separately.
+2. Open FlintDock from Start. The first-run wizard can connect
+   your existing Windows Bedrock dedicated server or create a new server.
+3. New server: use the wizard's official download link, download the Windows
+   ZIP, read Minecraft's EULA, select the ZIP and an empty local data folder.
+   Accept the EULA yourself to continue. No Minecraft binary is in this product.
+4. Press Ignite server in FlintDock. The dedicated server creates a new world.
+   Fresh servers require an allowlist: in Console send allowlist add "Gamertag"
+   before connecting. No operator accounts, personal settings or sample world ship.
+5. Review Restart settings before leaving the server unattended. The default
+   schedule uses local computer time. Closing the GUI can leave the manager
+   running, but this is not a Windows service and does not survive a reboot.
+
+LAUNCHER UPDATES (NEW IN 1.3.0)
+Open Settings > FlintDock updates (also available under Help and on Updates).
+FlintDock checks published stable GitHub releases about 30 seconds after opening
+if a check is due, then periodically while the launcher stays open. The default
+interval is six hours; choose 1, 6, 12 or 24 hours, or turn periodic checks off.
+Check now works manually even with periodic checks off. Check times persist
+between launches to avoid repeated requests. Network failures do not stop your
+server; automatic attempts wait until the next scheduled check.
+
+Automatic downloads are OFF by default. Turn on "Automatic updates: download new
+releases (do not install)" to download verified updates when periodic checks are
+enabled. With it off, you get an update notice and can click Download update.
+Background work shows progress and can be cancelled; the launcher stays usable.
+
+Only this public GitHub repository is checked:
+https://github.com/joshuajhigdon/FlintDock/releases
+No GitHub token, account or LootLabs task is needed. A private or unpublished
+repository cannot supply customer updates. Drafts, prereleases, older versions,
+GitHub source-code ZIPs and releases without verification information are not
+automatic update packages. The exact Windows standalone release asset is used.
+GitHub's SHA-256 asset digest and/or SHA256SUMS.txt is checked; when both exist,
+they must agree. Wrong sizes/hashes, unsafe archive paths and embedded server
+data are rejected. Checksums do not prove publisher identity or replace antivirus.
+
+Downloads and app-wide preferences live separately from your server:
+%LOCALAPPDATA%\BedrockServerLauncher\FlintDockUpdates
+Open downloads folder from the update dialog. Files are never executed,
+extracted or installed automatically, and your server is never stopped by the
+checker. To install, stop the server/manager and close FlintDock, extract the
+whole ZIP into a NEW application folder outside your server data, then launch
+the new FlintDock.exe. Keep its worker and _internal folder together. Update
+your shortcut if needed; the existing saved server selection remains available.
+These settings are separate from the Minecraft Bedrock server update schedule.
+Checks stop when the launcher closes, even if its server manager stays running.
+
+PLAYERS, OFFLINE HISTORY AND ROLES (ADDED IN 1.2.0)
+Players now includes saved history, allowlisted players and current connections.
+Search by name, filter Online/Offline, or click a heading to sort. Select a name
+to see recent activity, sessions, playtime, queued commands and its saved role.
+Use the page scrollbar on smaller windows. The Activity tab still provides the
+full searchable timeline and CSV export.
+
+Command queue: enter a Bedrock console command, review the preview and confirm.
+Example: give {player} bread 3. A standalone @s also becomes the quoted name;
+text inside JSON/quotes and qualified selectors are not rewritten. Other
+selectors retain their usual scope, so @a can affect everyone. Commands run
+on the NEXT join after queuing, not immediately for an already-online player.
+Cancel pending commands from the same tab. Sent means pipe delivery, not a
+confirmed in-game result. Failed delivery stays pending; no automatic retry
+during that session. Review Console before retrying. A process crash between
+dispatch and recording can leave uncertain delivery; exactly-once execution
+cannot be guaranteed. The detached manager must remain running to deliver.
+Existing history/queues are retained. New queues bind to the saved Xbox ID when
+known; an identity mismatch is held for review. Older/name-only queues retain
+name-based behavior. Changed gamertags may require cancelling and re-queuing.
+
+Role & actions: select Visitor, Member or Operator, review and Save role.
+The player needs a recorded numeric Xbox ID (join once if it is missing).
+Only that ID's permissions override changes; server defaults and other grants
+are preserved. Previous permissions are copied to permission-history/ in the
+customer's server folder. With the server running, the updated manager sends
+permission reload; verify Console or reconnect/restart if the role is not yet
+active. A saved file is not proof of live application. Malformed permissions
+or conflicting edits block the save instead of discarding existing grants.
+Do not edit permissions.json in another tool at the same time.
+After upgrading, stop/restart the manager with 1.3.0 before using the new live
+role/queue controls. Nothing enables cheats or grants console-only privileges.
+
+CHANGE SERVER FOLDER
+Use the Bedrock Server Setup shortcut in Start. Existing server configuration
+is not reset. Each server keeps its own world, settings, backups and history.
+Do not run two copies of the server against the same world or game ports.
+
+IN-GAME TOOLS AND COMMANDS
+Start a new server once, then stop it before installing packs. In Mods use
+Install/update in-game tools. Read its compatibility and settings prompts.
+The launcher backs up and installs the bundled original Restart Manager Link
+add-on, then generates help/menu data for that server. Restart the server.
+Grant operator status only to trusted administrators; never every player.
+Command Help explains core commands, the added commands and discoverable mod
+functions. Admin Quick Commands provides 28 searchable, previewable presets.
+The add-on provides 16 operator-only commands, including heal/feed, teleport
+helpers, weather/time controls, announcements and administration menus.
+Some commands require cheats; enabling cheats can affect achievements.
+Not every third-party add-on exposes discoverable/documented commands.
+Future Bedrock/API versions are not guaranteed: rehearse upgrades first.
+
+UPGRADES / UNINSTALL
+FlintDock is the new name of Bedrock Server Launcher. The saved setup folder
+still uses the legacy BedrockServerLauncher name to preserve your selection.
+The in-game Restart Manager Link pack keeps its identity and command namespace
+so existing installations can be updated without duplicating their packs.
+Stop every managed server and close the launcher before upgrading/uninstalling.
+Run a newer installer into the same dedicated application folder. User data
+is kept outside that folder. Uninstall via Windows Apps or the Start shortcut.
+Uninstall removes only known application files/shortcuts and its app registry
+entry. It does NOT delete server folders, worlds, backups, player history or
+the saved setup selection in %LOCALAPPDATA%\BedrockServerLauncher.
+To erase data, first back it up and then delete only your chosen server folder
+and the launcher preference folder yourself. There is no automatic data wipe.
+
+REQUIREMENTS AND TROUBLESHOOTING
+Windows x64 desktop (Windows 10 22H2 locally tested; Windows 11 not yet tested).
+Use a supported, security-maintained Windows installation. Not macOS, Linux,
+Windows on ARM or a remote web panel. Allow 250 MB for the application and
+several GB separately for the server/worlds, plus space for backups. At least
+8 GB system RAM is recommended for a small server; actual needs vary.
+The Minecraft server must also meet its own current official requirements.
+An internet connection is needed for official server downloads and online play;
+offline launcher screens and local administration need no account/activation.
+The app does not configure router forwarding, firewall rules or game-client
+loopback exemptions. Do not disable security software to make it work.
+If the separately downloaded server reports a missing Visual C++ runtime,
+follow Microsoft's official x64 redistributable guidance, not third-party DLL sites:
+https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
+If Windows cannot verify the publisher, this build has no code-signing certificate.
+Verify the download source and SHA-256; managed PCs may disallow unsigned apps.
+If startup fails, use Server Setup again or reinstall the launcher. Error details:
+%LOCALAPPDATA%\BedrockServerLauncher\startup-error.log
+For a running server problem inspect Console, Health and Recovery before retrying.
+Never restore a backup over a running server. Support logs may contain player
+names, IP addresses and local paths: redact them before sharing.
+
+OFFICIAL REFERENCES
+Server download: https://www.minecraft.net/en-us/download/server/bedrock
+Server setup/networking: https://learn.microsoft.com/en-us/minecraft/creator/documents/bedrockserver/getting-started?view=minecraft-bedrock-stable
+Minecraft EULA: https://www.minecraft.net/en-us/eula
+This product neither includes hosting nor bypasses Minecraft licensing.

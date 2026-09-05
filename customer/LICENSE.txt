@@ -1,0 +1,40 @@
+FlintDock 1.3.0 - end-user terms
+
+You may install and use this version free of charge on Windows computers to
+administer servers you own or are authorized to manage. No purchase,
+subscription or paid activation is required. Keep backup copies for your
+own use. Do not resell or redistribute the original launcher as a
+standalone product. This does not restrict rights separately granted by the
+third-party licenses supplied in this package.
+
+Downloads may be offered through LootLabs-supported links. This does not add
+advertisements, a LootLabs account requirement or online activation to the
+launcher itself. Free use does not grant an open-source license; source code
+is not supplied by this binary distribution.
+
+Minecraft and its dedicated server are NOT included and must be obtained
+from their official source under their own terms. This is independent
+software, not an official Minecraft product, and is not approved by or
+associated with Mojang or Microsoft. Game access and hosting are not included.
+
+Keep independent backups. No software can guarantee against world corruption,
+lost data or future game/API incompatibility. To the extent permitted by law,
+the launcher is supplied as-is without additional warranties. This does not
+exclude mandatory consumer rights or applicable marketplace obligations.
+Use of this version does not promise lifetime updates, future features, hosted service,
+or a specific support response time. No online activation is required.
+
+Third-party runtime terms
+The included Python, Tcl/Tk, SQLite, compression, TLS and other runtime
+components retain their own licenses and notices in the licenses directory.
+Python source is not modified; selected standard-library modules are frozen
+and the Python Windows runtime is bundled unmodified.
+
+For Microsoft Distributable Code included in Python's Windows runtime:
+do not alter copyright, trademark or patent notices; do not use Microsoft's
+trademarks to imply endorsement; distribute/use this Windows runtime only on
+Microsoft operating systems, runtime technologies or application platforms;
+do not include it in malicious, deceptive or unlawful programs. Any permitted
+further distribution must retain these restrictions and applicable notices.
+These conditions apply to Microsoft Distributable Code, not to independent
+Python code. See licenses/PYTHON.txt for the full Windows binary conditions.

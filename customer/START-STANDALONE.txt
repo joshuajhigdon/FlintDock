@@ -1,0 +1,53 @@
+FLINTDOCK 1.3.0 - STANDALONE FOLDER EDITION
+
+1. Right-click the downloaded ZIP in File Explorer and choose Extract All.
+   Choose a new, dedicated local application folder outside your server folder.
+2. Open the extracted FlintDock folder and run FlintDock.exe.
+   Keep FlintDockWorker.exe and the entire _internal folder alongside it.
+   Do not run inside the ZIP or copy just one EXE. Python is already included.
+3. Follow the first-run wizard to select your server or create a new one using
+   your own official Bedrock server download and your own EULA acceptance.
+   Store worlds and server files OUTSIDE the application folder.
+
+This edition needs no installer or administrator rights. It does not install
+shortcuts or register in Windows Apps. You may create a shortcut to the extracted
+FlintDock.exe using File Explorer (on Windows 11, Show more options).
+
+To open Server Setup again, open PowerShell in the extracted application folder:
+  .\FlintDock.exe --setup
+
+UPDATING
+Stop the server and its manager and close the launcher. Extract the new release
+to a separate new application folder and run the new FlintDock.exe. Never
+extract over an active app or a server directory. Update your shortcut if used.
+The saved server selection remains in %LOCALAPPDATA%\BedrockServerLauncher;
+your server, worlds, settings and backups remain in your selected server folder.
+This legacy preference-folder name is intentional: FlintDock retains settings
+from Bedrock Server Launcher. Its Restart Manager Link add-on identity also
+stays stable. In the new theme, Ignite server is the existing Start action.
+Keep a backup before any application, server or add-on upgrade. Do not run old
+and new launcher copies simultaneously against the same server.
+
+REMOVING
+Stop the server and manager, close the launcher, and remove only the dedicated
+extracted application folder and any shortcuts you created. There is no automatic
+data cleanup. Keep the separate server folder and launcher preferences to retain
+your data. This is an install-free app, not a USB-portable settings profile.
+
+SECURITY
+Keep Windows security enabled. A folder build avoids executable self-extraction
+at app startup, but no packaging method guarantees acceptance by antivirus or
+SmartScreen. Verify the source of your download and the publisher's SHA-256.
+If security software blocks a file, report the exact filename and detection to
+the publisher; do not disable antivirus or add exclusions to run it.
+
+Full features, requirements, licensing and help:
+  _internal\customer\START-HERE.txt
+  _internal\customer\LICENSE.txt
+  _internal\customer\THIRD-PARTY-NOTICES.txt
+The INSTALL and UPGRADES / UNINSTALL sections in START-HERE describe the separate
+installer edition. Use THIS guide for the standalone edition. NSIS notices are
+retained for that edition; there is no NSIS installer in this standalone ZIP.
+
+Independent software, not affiliated with Mojang or Microsoft. No Minecraft
+server binary, game assets, world, player data or private settings are included.

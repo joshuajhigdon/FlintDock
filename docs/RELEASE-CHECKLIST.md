@@ -1,12 +1,13 @@
 # Maintainer release checklist
 
-This is a downloads/documentation repository. Keep application source, live servers,
-worlds, build environments, credentials and private reports out of Git history.
-The deny-by-default `.gitignore` deliberately allows only reviewed documentation
-and branding. Do not bypass it with `git add -f`.
+This repository publishes reviewed application/add-on source, tests, build helpers,
+documentation and branding. Keep live servers, worlds, build environments,
+credentials, machine-specific deployment scripts and private reports out of Git.
+The deny-by-default `.gitignore` explicitly lists reviewed files and directories.
+Add new source files deliberately; do not bypass it with `git add -f`.
 
 Local release assets may be staged in `.release-assets/v1.3.0/` and are ignored by Git.
-Commit/push the product documentation only; attach the binaries to a release.
+Commit/push clean source and documentation; attach built binaries to a release.
 No commit, push, tag, GitHub release or LootLabs link is automatically created by
 this repository preparation.
 
@@ -20,7 +21,8 @@ this repository preparation.
 - Run a targeted Defender scan with protection enabled and verify completion.
 - Keep third-party licenses. Never upload the original project/server directory.
 - Retain the unsigned-build and test-limitations disclosures in release notes.
-- Keep the source code private if desired; do not label this repository open-source.
+- Inspect the staged source for private identifiers, credentials and live data.
+  Source availability does not grant a new open-source license.
 - Never add API tokens to files, commit messages, URLs, screenshots or downloads.
   Rotate exposed tokens before any later integration.
 

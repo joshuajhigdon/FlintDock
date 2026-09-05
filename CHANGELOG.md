@@ -1,5 +1,18 @@
 # Changelog
 
+## Source publication — September 5, 2026
+
+- Published the 1.3.0 launcher and companion add-on source, automated tests,
+  original branding resources and standalone/installer build helpers.
+- Added portable source-launch and build instructions; removed maintainer-machine
+  identifiers from build-helper privacy patterns. Runtime behavior is unchanged.
+- Pinned text checkouts to LF so generated add-on reference files compare
+  reproducibly regardless of the machine's Git newline settings.
+- Kept server data, credentials, environments, compiled caches, QA artifacts and
+  machine-specific deployment/publication scripts out of the repository.
+- Existing license terms remain in effect; this is source availability, not a
+  change to an open-source license.
+
 ## 1.3.0 — launcher updates
 
 - Check the public GitHub stable-release feed while the GUI is open. Checks

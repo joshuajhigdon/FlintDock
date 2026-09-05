@@ -1,0 +1,44 @@
+Bundled component inventory - FlintDock 1.3.0
+
+FlintDock's portal, obsidian frame, flint-and-steel shapes and icon are original
+code-drawn artwork. No Minecraft textures, sounds, logos or game assets are
+included. Build-time image-export tools are not bundled in the application.
+
+CPython 3.14.7 (Windows x64), selected standard library, Python DLL and modules:
+PSF license stack and Windows redistributable conditions, licenses/PYTHON.txt.
+This includes Python's notices for bzip2, libffi, Zstandard, Apache 2.0,
+and Tcl/Tk. Runtime binaries are unmodified. Standard-library modules are
+compiled/frozen into the application; no Python source changes are made.
+https://www.python.org/  https://docs.python.org/3.14/license.html
+
+Tcl/Tk 9.0, Tcl library and LibTomMath: permissive Tcl/Tk notices in PYTHON.txt;
+additional LibTomMath notice supplied. https://www.tcl-lang.org/
+
+OpenSSL 3.5.7: Apache 2.0 (licenses/OPENSSL.txt). Copyright (c) 1998-2026
+The OpenSSL Project Authors. Copyright (c) 1995-1998 Eric A. Young,
+Tim J. Hudson. https://www.openssl.org/
+
+SQLite 3.50.4: public domain. https://www.sqlite.org/copyright.html
+
+zlib / zlib-ng: permissive zlib license; notices supplied separately.
+https://www.zlib.net/  https://github.com/zlib-ng/zlib-ng
+
+Microsoft Visual C++ runtime DLLs: unmodified files accompanying Python's
+Windows distribution. See PYTHON.txt and LICENSE.txt for binary restrictions.
+These files are included only as runtime components of this Windows program.
+
+PyInstaller 6.22.2 bootloaders: GPL with distribution exception for combined
+applications; runtime hooks Apache 2.0. licenses/PYINSTALLER.txt retains the
+distribution's complete licensing terms. Bootloaders are unmodified.
+https://pyinstaller.org/en/stable/license.html
+
+NSIS 3.12 installer, Modern UI and System plugin: zlib/libpng license.
+This installer uses zlib compression (not the NSIS LZMA compressor).
+licenses/NSIS.txt retains the complete upstream notices.
+https://nsis.sourceforge.io/License
+
+No Minecraft server executable, official game asset, third-party Minecraft
+add-on, player identity, pre-generated world, credential, or server backup
+is bundled. The included Restart Manager Link scripts are original launcher
+companion code and reference, but do not include, the Minecraft Script APIs.
+Minecraft must be downloaded independently under its own terms.

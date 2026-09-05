@@ -1,2 +1,4 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Keep generated JavaScript and its reproducibility tests identical on Windows.
+* text=auto eol=lf
+*.png binary
+*.ico binary

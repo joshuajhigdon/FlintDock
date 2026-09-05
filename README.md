@@ -7,7 +7,8 @@ tool for Minecraft Bedrock Dedicated Server.
 
 Obsidian panels, portal-violet accents and an ignition-themed dashboard bring
 server controls, health checks, add-ons and admin tools into one interface.
-This repository is for product information and binary downloads, not source code.
+This repository includes the launcher source, companion add-on source, tests,
+build helpers and product documentation. Ready-to-run downloads are Release assets.
 
 ## Downloads
 
@@ -21,14 +22,24 @@ choose an attached release asset when available:
 **Version 1.3.0 is a standalone ZIP release; there is no 1.3.0 installer.**
 See the [1.3.0 release notes](docs/RELEASE-NOTES.md) for features and testing.
 
-GitHub's automatically generated **Source code** ZIP/tar.gz contains this
-documentation repository, not the launcher. Download the named FlintDock asset.
+GitHub's automatically generated **Source code** ZIP/tar.gz snapshots its tag,
+not a ready-to-run EXE. The existing v1.3.0 tag predates source publication;
+use [main's source ZIP](https://github.com/joshuajhigdon/FlintDock/archive/refs/heads/main.zip)
+or clone main for the application source. Most users should download the named
+FlintDock standalone asset instead.
 Do not copy or run an EXE by itself; its companion runtime files are required.
 
 FlintDock is free to use under the [included terms](LICENSE.txt). Downloads may
 be supported through LootLabs links. The launcher contains no advertising,
 LootLabs API key, paid activation or LootLabs account requirement. A free-use
 binary license is not an open-source license.
+
+## Source and building
+
+Browse [the Python launcher](src/BedrockLauncher.pyw), [the companion add-on](src/addon_src/RestartManagerLink),
+or [the tests](src/tests). See [Source code](docs/SOURCE-CODE.md) for the layout and
+license clarification, and [BUILDING.md](BUILDING.md) for source-launch, test and
+standalone-build commands. Keep this checkout separate from your server and worlds.
 
 ## Features
 
