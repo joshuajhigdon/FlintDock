@@ -1,0 +1,20 @@
+# This repository publishes documentation. Attach binaries as Release assets.
+# Deny new root entries by default to avoid committing server data or secrets.
+/*
+!/.gitattributes
+!/.gitignore
+!/README.md
+!/LICENSE.txt
+!/CHANGELOG.md
+!/docs/
+/docs/*
+!/docs/INSTALLATION.md
+!/docs/RELEASE-CHECKLIST.md
+!/docs/RELEASE-NOTES.md
+!/assets/
+/assets/*
+!/assets/flintdock-icon.png
+!/assets/flintdock-portal.png
+
+# .release-assets, environments, source/server trees, worlds, logs, credentials,
+# .env files, screenshots and arbitrary archives stay ignored by default.
